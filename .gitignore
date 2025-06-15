@@ -13,7 +13,7 @@ yarn-error.log
 
 # Environmen
 /src/environments/environment.development.ts
-/src/environments/environment.prod.ts
+/src/environments/environment.ts
 
 # IDEs and editors
 .idea/
