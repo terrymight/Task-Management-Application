@@ -1,0 +1,11 @@
+<div>
+    <h2>Login</h2>
+    <form (ngSubmit)="login()">
+        <input type="email" name="email" (input)="onEmailInput($event)" placeholder="Email" id="email" required>
+        <input type="password" name="password" (input)="onPasswordInput($event)" placeholder="Password" id="password" required>
+        <button type="submit">Login</button>
+        <button (click)="loginWithGoogle()">Login With Google</button>
+    </form>
+
+    <p *ngIf="error()">{{ error() }}</p>
+</div>

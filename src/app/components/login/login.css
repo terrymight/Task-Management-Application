@@ -1,0 +1,39 @@
+
+div {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: 25% auto;
+}
+
+button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:nth-child(4) {
+  background-color: #db4437;
+}
+
+button:nth-child(4):hover {
+  background-color: #c1351f;
+}
+
+p {
+  color: #d32f2f;
+  margin-top: 1rem;
+}

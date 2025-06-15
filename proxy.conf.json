@@ -1,0 +1,26 @@
+{
+  "/api/*": {
+    "target": "https://angular-firebase-932ec.firebaseapp.com",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  },
+  "/firestore/*": {
+    "target": "https://firestore.googleapis.com",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/firestore": ""
+    }
+  },
+  "/auth/*": {
+    "target": "https://identitytoolkit.googleapis.com",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/auth": ""
+    }
+  }
+}

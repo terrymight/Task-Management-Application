@@ -1,0 +1,44 @@
+<div class="container">
+  <header class="header">
+    <h1 class="title">My Tasks</h1>
+    <button (click)="onLogout()" class="logout-button">Logout</button>
+  </header>
+
+  <section class="task-form-section">
+    <h2 class="section-title">Add New Task</h2>
+    <form (ngSubmit)="addTask()" class="task-form">
+      <input
+        type="text"
+        placeholder="Task Title"
+        [value]="newTaskTitle()"
+        (input)="onInput($event, newTaskTitle)"
+        class="input-field"
+        required
+      >
+      <textarea
+        placeholder="Task Description"
+        [value]="newTaskDescription()"
+        (input)="onInput($event, newTaskDescription)"
+        class="textarea-field"
+        required
+      ></textarea>
+      <button type="submit" class="add-button">Add Task</button>
+    </form>
+    <!-- Display error signal if it has a value -->
+    <p *ngIf="error()" class="error-message">{{ error() }}</p>
+  </section>
+
+  <section class="task-list-section">
+    <h2 class="section-title">Your Current Tasks</h2>
+    <p *ngIf="tasks().length === 0 && !error()" class="no-tasks-message">No tasks yet. Add one above!</p>
+    <ul class="task-list">
+      <li *ngFor="let task of tasks()" class="task-item">
+        <div class="task-content">
+          <h3 class="task-title">{{ task.title }}</h3>
+          <p class="task-description">{{ task.description }}</p>
+        </div>
+        <button (click)="deleteTask(task.id)" class="delete-button">Delete</button>
+      </li>
+    </ul>
+  </section>
+</div>
