@@ -75,6 +75,8 @@ firebase deploy
 Access the app at the provided Firebase URL (e.g., https://taskmanager.web.app).
 
 **Project Structure**
+
+```
 task-manager/
 ├── src/
 │   ├── app/
@@ -95,6 +97,7 @@ task-manager/
 ├── angular.json
 ├── package.json
 ├── README.md
+```
 
 **Usage**
 
